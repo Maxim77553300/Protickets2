@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+        <h1>Ticket-Order Page</h1>
+        <h4>User name : {{$ctrl.currentName}}</h4>
+        
+
+  
+      </div>
+
+      <div class="col-md-10" >
+        <!--Body content-->
+  
+        <ul class="tickets">
+          <li ng-repeat="ticket in $ctrl.tickets | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+            <h3>Ticket price : {{ticket.price}}</h3>   
+            <h3>Ticket seat number : {{ticket.seatNumber}}</h3>
+            <h3>Movie session : {{ticket.movieSessionId}}</h3>
+            <h3>Status : {{ticket.ticketStatus}}</h3>
+            <h3>TicketId : {{ticket.id}}</h3>
+
+            <div class="switch" ng-init="check='choose this ticket'">
+              <input  ng-click="$ctrl.setTicket(ticket)" id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+              <label for="cmn-toggle-1">{{check}}</label>
+         </div>
+    
+            <div>
+                <button type="submit" onclick="document.location='#!/orders/'" class="btn btn-default">Submit</button>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

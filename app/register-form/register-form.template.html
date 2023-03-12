@@ -1,0 +1,79 @@
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+         <div><h2>{{$ctrl.greeting}}</h2></div>
+
+      <form name="testform">
+        <div class="form-group">
+          <label for="userUserName">Username</label>
+          <input
+            type="username"
+            class="form-control"
+            id="userUserName"
+            placeholder="Username"
+            ng-model="user.userName"
+          />
+        </div>
+        <div class="form-group">
+            <label for="userFirstName">Firstname</label>
+            <input
+              type="firstname"
+              class="form-control"
+              id="userFirstName"
+              placeholder="Firstname"
+              ng-model="user.firstName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userLastName">Lastname</label>
+            <input
+              type="lastname"
+              class="form-control"
+              id="userLastName"
+              placeholder="Lastname"
+              ng-model="user.lastName"
+            />
+          </div>
+        <div class="form-group">
+          <label for="userPassword">Password</label>
+          <input
+            type="current-password"
+            class="form-control"
+            id="userPassword"
+            placeholder="Password"
+            ng-model="user.password"
+          />
+        </div>
+        <div class="form-group">
+            <label for="userPhone">Phone</label>
+            <input
+              type="phone"
+              class="form-control"
+              id="userPhone"
+              placeholder="Phone"
+              ng-model="user.phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userEmail">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="userEmail"
+              placeholder="Email"
+              ng-model="user.email"
+            />
+          </div>
+        <button type="submit" ng-click="$ctrl.register(user)" class="btn btn-default">
+          Register
+        </button>
+      </form>    
+
+</div>
+    </div>
+
+
+
+

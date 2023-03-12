@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+      <h1>Movies Page</h1>
+      <h4>User name : {{$ctrl.currentName}}</h4>
+      
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10" >
+      <!--Body content-->
+
+      <ul class="movies">
+        <li ng-repeat="movie in $ctrl.movies | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+          <a href="#!/movies/{{movie.id}}" >{{movie.name}}</a>   
+          <h3>The name of movie : "{{movie.name}}"; Movie description : "{{movie.description}}"; Movie session : {{movie.id}}</h3>   
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+  

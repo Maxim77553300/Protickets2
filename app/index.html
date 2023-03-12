@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" ng-app="protickets2App">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Cinema Gallery</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/checkmark/checkmark.filter.js"></script>
+    <script src="core/cinema/cinema.module.js"></script>
+    <script src="core/movie/movie.module.js"></script>
+    <script src="core/cinema/cinema.service.js"></script>
+    <script src="core/movie/movie.service.js"></script>
+    <script src="core/register/register.module.js"></script>
+    <script src="core/register/register.service.js"></script>
+    <script src="core/login/login.module.js"></script>
+    <script src="core/login/login.service.js"></script>
+    <script src="core/ticket/ticket.module.js"></script>
+    <script src="core/ticket/ticket.service.js"></script>
+    <script src="cinema-list/cinema-list.module.js"></script>
+    <script src="cinema-list/cinema-list.component.js"></script>
+    <script src="cinema-detail/cinema-detail.module.js"></script>
+    <script src="cinema-detail/cinema-detail.component.js"></script>
+    <script src="movie-list/movie-list.module.js"></script>
+    <script src="movie-list/movie-list.component.js"></script>
+    <script src="movie-description/movie-description.module.js"></script>
+    <script src="movie-description/movie-description.component.js"></script>
+    <script src="register-form/register-form.module.js"></script>
+    <script src="register-form/register-form.component.js"></script>
+    <script src="login-form/login-form.module.js"></script>
+    <script src="login-form/login-form.component.js"></script>
+    <script src="core/login/interceptor.service.js"></script>
+    <script src="core/login/auth.service.js"></script>
+    <script src="ticket-order/ticket-order.module.js"></script>
+    <script src="ticket-order/ticket-order.component.js"></script>
+    <script src="core/order/order.module.js"></script>
+    <script src="core/order/order.service.js"></script>
+    <script src="order-user/order-user.module.js"></script>
+    <script src="order-user/order-user.component.js"></script>
+    <script src="core/ticket/order-form.service.js"></script>
+    <script src="core/movie-session/movie-session.module.js"></script>
+    <script src="core/movie-session/movie-session.service.js"></script>
+    <script src="movie-session-list/movie-session-list.module.js"></script>
+    <script src="movie-session-list/movie-session-list.componenet.js"></script>
+    
+    <link rel="shortcut icon" href="#">
+  </head>
+  <body>
+    <a href="#!/cinemas">Protickets App</a> 
+    <br>
+    <br>
+    <a href="#!/users/register">Registration new User</a> 
+    <br>
+    <br>
+    <a href="#!/users/login">Login</a>
+    <div ng-view></div>
+  </body>
+</html>
+

@@ -1,0 +1,113 @@
+<img ng-src="{{$ctrl.mainImageUrl}}" class="cinema" />
+
+<h1>{{$ctrl.cinema.name}}</h1>
+
+<p>{{$ctrl.cinema.description}}</p>
+
+<ul class="cinema-thumbs">
+  <li ng-repeat="img in $ctrl.cinema.images">
+    <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" />
+  </li>
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Availability and Networks</span>
+    <dl>
+      <dt>Availability</dt>
+      <dd ng-repeat="availability in $ctrl.cinema.availability">{{availability}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Battery</span>
+    <dl>
+      <dt>Type</dt>
+      <dd>{{$ctrl.cinema.battery.type}}</dd>
+      <dt>Talk Time</dt>
+      <dd>{{$ctrl.cinema.battery.talkTime}}</dd>
+      <dt>Standby time (max)</dt>
+      <dd>{{$ctrl.cinema.battery.standbyTime}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Storage and Memory</span>
+    <dl>
+      <dt>RAM</dt>
+      <dd>{{$ctrl.cinema.storage.ram}}</dd>
+      <dt>Internal Storage</dt>
+      <dd>{{$ctrl.cinema.storage.flash}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Connectivity</span>
+    <dl>
+      <dt>Network Support</dt>
+      <dd>{{$ctrl.cinema.connectivity.cell}}</dd>
+      <dt>WiFi</dt>
+      <dd>{{$ctrl.cinema.connectivity.wifi}}</dd>
+      <dt>Bluetooth</dt>
+      <dd>{{$ctrl.cinema.connectivity.bluetooth}}</dd>
+      <dt>Infrared</dt>
+      <dd>{{$ctrl.cinema.connectivity.infrared | checkmark}}</dd>
+      <dt>GPS</dt>
+      <dd>{{$ctrl.cinema-list.connectivity.gps | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Android</span>
+    <dl>
+      <dt>OS Version</dt>
+      <dd>{{$ctrl.cinema.android.os}}</dd>
+      <dt>UI</dt>
+      <dd>{{$ctrl.cinema.android.ui}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Size and Weight</span>
+    <dl>
+      <dt>Dimensions</dt>
+      <dd ng-repeat="dim in $ctrl.cinema.sizeAndWeight.dimensions">{{dim}}</dd>
+      <dt>Weight</dt>
+      <dd>{{$ctrl.cinema.sizeAndWeight.weight}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Display</span>
+    <dl>
+      <dt>Screen size</dt>
+      <dd>{{$ctrl.cinema.display.screenSize}}</dd>
+      <dt>Screen resolution</dt>
+      <dd>{{$ctrl.cinema.display.screenResolution}}</dd>
+      <dt>Touch screen</dt>
+      <dd>{{$ctrl.cinema.display.touchScreen | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Hardware</span>
+    <dl>
+      <dt>CPU</dt>
+      <dd>{{$ctrl.cinema.hardware.cpu}}</dd>
+      <dt>USB</dt>
+      <dd>{{$ctrl.cinema.hardware.usb}}</dd>
+      <dt>Audio / headphone jack</dt>
+      <dd>{{$ctrl.cinema.hardware.audioJack}}</dd>
+      <dt>FM Radio</dt>
+      <dd>{{$ctrl.cinema.hardware.fmRadio | checkmark}}</dd>
+      <dt>Accelerometer</dt>
+      <dd>{{$ctrl.cinema.hardware.accelerometer | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Camera</span>
+    <dl>
+      <dt>Primary</dt>
+      <dd>{{$ctrl.cinema.camera.primary}}</dd>
+      <dt>Features</dt>
+      <dd>{{$ctrl.cinema.camera.features.join(', ')}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Additional Features</span>
+    <dd>{{$ctrl.cinema.additionalFeatures}}</dd>
+  </li>
+</ul>
